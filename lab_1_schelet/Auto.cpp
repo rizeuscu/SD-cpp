@@ -19,6 +19,17 @@ int main() {
 	/*
 	 * TODO Create array of pair, print the first field of each and the sum of all second fields
 	 */
-
+	float sum = 0;
+	std::pair<int, float> v[10];
+	for (int i = 0; i < 10; ++i) {
+		v[i].first = i;
+		v[i].second = v[i].first * 2.5;
+	}
+	for (auto x : v) {
+		out << x.first << " ";
+		sum += x.second;
+	}
+	out << sum;
+	file.close();
 	return 0;
 }
